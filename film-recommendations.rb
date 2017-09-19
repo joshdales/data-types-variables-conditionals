@@ -2,6 +2,7 @@ recommended_documentary = "Tim's Vermeer"
 recommended_drama = "The Departed"
 recommended_comedy = "Hot Fuzz"
 recommended_dramedy = "The Way Way Back"
+recommended_book = "American Gods"
 
 puts "Do you enojoy documentaries?"
 documentary_anwser = gets.chomp
@@ -14,14 +15,16 @@ elsif documentary_anwser == "no"
   puts "Do you enjoy comedies?"
   comedy_anwser = gets.chomp
   if drama_anwser == "yes" && comedy_anwser == "yes"
-    puts "You should watch #{recommended_dramedy}"
+    puts "You should watch #{recommended_dramedy}."
     return
   elsif drama_anwser == "yes" && comedy_anwser == "no"
-    puts "You should watch #{recommended_drama}"
+    puts "You should watch #{recommended_drama}."
     return
   elsif drama_anwser == "no" && comedy_anwser == "yes"
-    puts "You should watch #{recommended_comedy}"
+    puts "You should watch #{recommended_comedy}."
     return
+  elsif drama_anwser == "no" && comedy_anwser == "no"
+    puts "Perhaps read a good book like #{recommended_book} instead."
   end
 else
   puts "Please anwser yes or no"
