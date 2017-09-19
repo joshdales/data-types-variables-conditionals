@@ -8,6 +8,15 @@ documentary_anwser = gets.chomp
 if documentary_anwser == "yes"
   puts "You should watch #{recommended_documentary}."
   return
+elsif documentary_anwser == "no"
+  puts "Do you enojoy dramas?"
+  drama_anwser = gets.chomp
+  puts "Do you enjoy comedies?"
+  comedy_anwser = gets.chomp
+  if drama_anwser == "yes" && comedy_anwser == "yes"
+    puts "You should watch #{recommended_dramedy}"
+    return
+  end
 else
   puts "Please anwser yes or no"
 end
