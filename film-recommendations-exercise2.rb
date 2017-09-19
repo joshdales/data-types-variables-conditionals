@@ -11,16 +11,15 @@ puts "Please rate your appreciation for dramas"
 drama_rate = gets.chomp.to_i
 puts "Please rate your appreciation for comedies"
 comedy_rate = gets.chomp.to_i
-puts "Please rate your appreciation for dramedies"
-dramedy_rate = gets.chomp.to_i
 
-if documentary_rate > 4
+if documentary_rate >= 4 && (drama_rate < 4 && comedy_rate < 4)
   puts "You should watch #{recommended_documentary}."
-elsif documentary_rate < 3 && (drama_rate > 4 && comedy_rate > 4)
+elsif documentary_rate <= 3 && (drama_rate >= 4 && comedy_rate >= 4)
   puts "You should watch #{recommended_dramedy}."
-elsif drama_rate > 4 && (documentary_rate < 4 && comedy_rate < 4)
+elsif drama_rate >= 4 && (documentary_rate < 4 && comedy_rate < 4)
   puts "You should watch #{recommended_drama}."
-elsif comedy_rate > 4 && (documentary_rate < 4 && drama_rate < 4)
+elsif comedy_rate >= 4 && (documentary_rate < 4 && drama_rate < 4)
   puts "You should watch #{recommended_comedy}."
-
+else
+  puts "Perhaps read a good book like #{recommended_book} instead."
 end
