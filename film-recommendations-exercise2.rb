@@ -5,10 +5,16 @@ recommended_dramedy = "The Way Way Back"
 
 puts "On a scale of 1 - 5..."
 puts "Please rate your appreciation for documentaries"
-documentary_anwser = gets.chomp.to_i
+documentary_rate = gets.chomp.to_i
 puts "Please rate your appreciation for dramas"
-drama_anwser = gets.chomp.to_i
+drama_rate = gets.chomp.to_i
 puts "Please rate your appreciation for comedies"
-comedy_anwser = gets.chomp.to_i
+comedy_rate = gets.chomp.to_i
 puts "Please rate your appreciation for dramedies"
-dramedy_anwser = gets.chomp.to_i
+dramedy_rate = gets.chomp.to_i
+
+if documentary_rate > 4
+  puts "You should watch #{recommended_documentary}."
+elsif documentary_rate < 3 && (drama_rate > 4 && comedy_rate > 4)
+  puts "You should watch #{recommended_dramedy}."
+end
