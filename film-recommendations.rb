@@ -16,6 +16,12 @@ elsif documentary_anwser == "no"
   if drama_anwser == "yes" && comedy_anwser == "yes"
     puts "You should watch #{recommended_dramedy}"
     return
+  elsif drama_anwser == "yes" && comedy_anwser == "no"
+    puts "You should watch #{recommended_drama}"
+    return
+  elsif drama_anwser == "no" && comedy_anwser == "yes"
+    puts "You should watch #{recommended_comedy}"
+    return
   end
 else
   puts "Please anwser yes or no"
